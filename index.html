@@ -16,6 +16,12 @@ h2{font-family:Georgia,serif;font-size:22px;margin:32px 0 8px}
 .summary{border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;padding:14px 16px;margin:0 0 8px}
 ul{padding-left:22px}li{margin:4px 0}
 a{color:var(--gold)}
+.support{display:grid;gap:.9em;max-width:32em;margin:1em 0}
+.support label{display:grid;gap:.3em;font-weight:600}
+.support input,.support select,.support textarea{font:inherit;padding:.55em .7em;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+.thanks{display:none;font-weight:600;color:var(--gold)}.thanks:target{display:block}
+.small{font-size:.9em;color:var(--muted)}
+button.button{background:none;color:var(--gold);cursor:pointer;justify-self:start;font:inherit;font-weight:600}
 .button{display:inline-block;padding:.7em 1.4em;border:1.5px solid var(--gold);border-radius:999px;text-decoration:none;font-weight:600}
 </style>
 </head>
@@ -56,9 +62,21 @@ a{color:var(--gold)}
 <p>If this policy changes, the updated version will be posted on this page with a new effective date.</p>
 
 <h2 id="support">Support and contact</h2>
-<p>Need help with the game, found a problem, or have a question about this policy? Email us and we'll get back to you.</p>
-<p><a class="button" href="mailto:oxsafa@gmail.com?subject=Elite%20Equestrian%20Support">Contact support</a></p>
-<p>Or write to <a href="mailto:oxsafa@gmail.com?subject=Elite%20Equestrian%20Support">oxsafa@gmail.com</a> with the subject <strong>"Elite Equestrian Support"</strong>. It helps to mention your device (for example, iPhone 13 or iPad) and what happened.</p>
+<p>Need help with the game, found a problem, or have a question about this policy? Send us a message and we'll reply by email.</p>
+<form class="support" action="https://formsubmit.co/oxsafa@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="Elite Equestrian Support">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://oxsafa-byte.github.io/elite-equestrian-privacy/#thanks">
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+<label>Your email<input type="email" name="email" required></label>
+<label>What do you need help with?
+<select name="topic"><option>Problem with the game</option><option>Question about playing</option><option>Privacy question</option><option>Other</option></select></label>
+<label>Tell us more<textarea name="message" rows="5" required></textarea></label>
+<label>Your device (optional)<input type="text" name="device" placeholder="For example, iPhone 13 or iPad"></label>
+<button type="submit" class="button">Send message</button>
+</form>
+<p id="thanks" class="thanks">Thank you! Your message was sent. We'll reply by email.</p>
+<p class="small">Messages sent with this form are delivered to us by FormSubmit (formsubmit.co) and are used only to answer you. The game itself still collects nothing.</p>
 </main>
 </body>
 </html>
